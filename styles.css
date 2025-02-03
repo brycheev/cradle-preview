@@ -1,0 +1,405 @@
+/* Основные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.container {
+  min-height: calc(100vh - 89px);
+  padding: 0 50px;
+}
+
+/* Шапка */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #ffbb00;
+  padding: 5px 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.header.sticky {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.nav ul li {
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Модальные окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Плавное исчезновение */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  margin: 15% auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  transform: translateY(-30px); /* Изначальное смещение вверх */
+  transition: transform 0.3s ease-in-out; /* Плавное движение */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.modal p {
+  font-size: 1.2rem;
+}
+
+/* Когда модальное окно открывается */
+.modal.open {
+  display: block;
+  opacity: 1;
+}
+
+.modal.open .modal-content {
+  transform: translateY(0); /* Двигаем модальное окно в нормальное положение */
+}
+
+/* Главный экран */
+.construction-cradle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  color: white;
+}
+
+.construction-cradle-wrapper {
+  background: url('./images/background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opacity {
+  background-color: #00000073;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.yellow {
+  color: #c50101;
+}
+
+.construction-cradle-content {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.construction-cradle p {
+  font-size: 1.2rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+.construction-cradle img {
+  object-fit: contain;
+}
+
+.construction-cradle .price {
+  color: red;
+  font-size: 2rem;
+}
+
+.cta-button {
+  background-color: #f39c12;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e67e22;
+}
+
+.beton {
+  width: 100%;
+}
+
+/* Характеристики */
+.features {
+  flex: 1;
+}
+
+.feature-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.features-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.features-card {
+  background-color: #fff;
+  width: 400px;
+  padding: 10px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-card h3 {
+  margin-top: 15px;
+  font-size: 1.6rem;
+}
+
+.features-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.features-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd; /* Линия между строками */
+  padding: 5px 0;
+}
+
+.feature:last-child {
+  border-bottom: none; /* Убираем линию после последней строки */
+}
+
+.content {
+  background-color: #ecf0f1;
+  margin-top: -5px;
+}
+
+.divider {
+  background: #000;
+  height: 500px;
+  width: 1px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.detail-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.detail-card {
+  background-color: #fff;
+  /* min-width: 500px; */
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.detail-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.detail-descrption {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-card .price {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* .detail-card:hover {
+  transform: translateY(-10px);
+} */
+
+.detail-card img {
+  object-fit: contain;
+  width: 300px;
+  height: 300px;
+}
+
+/* Подвал */
+/* .footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer p {
+  font-size: 1rem;
+} */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+} */
+th {
+  background-color: #f2f2f2;
+}
+tr {
+  border-bottom: 1px solid #ddd; /* Линия между строками */
+}
+tr:last-child {
+  border-bottom: none; /* Убираем линию после последней строки */
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+  z-index: 2;
+}
+
+.next {
+  right: 10px;
+  z-index: 2;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 3rem;
+  }
+  .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+  }
+  .divider {
+    display: none;
+  }
+  .slider-container {
+    flex: auto;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    font-size: 1rem;
+  }
+}

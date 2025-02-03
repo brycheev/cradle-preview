@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <title>СтройМаг - Магазин строительных материалов</title>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="header">
+      <div class="header-content">
+        <img
+          src="./images/logo.png"
+          alt=""
+        />
+        <nav class="nav">
+          <ul>
+            <li data-i18n="contacts" id="contacts-btn">Контакты</li>
+            <li data-i18n="address" id="address-btn">Адрес</li>
+            <li id="language-toggle">🇰🇬 Кыр</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Модальные окна -->
+    <!-- Модальное окно для контактов -->
+    <div
+      id="contacts-modal"
+      class="modal"
+    >
+      <div class="modal-content">
+        <span
+          class="close-btn"
+          id="close-contacts"
+          >&times;</span
+        >
+        <h2 data-i18n="contacts_modal_title">Контактная информация</h2>
+
+        <p>+996507000222</p>
+        <p>+996551555000</p>
+      </div>
+    </div>
+
+    <!-- Модальное окно для адреса -->
+    <div
+      id="address-modal"
+      class="modal"
+    >
+      <div class="modal-content">
+        <span
+          class="close-btn"
+          id="close-address"
+          >&times;</span
+        >
+        <h2 data-i18n="address_modal_title">Наш адрес</h2>
+        <p data-i18n="address_modal_description">С. Пригородное, Ул. Островского 11</p>
+      </div>
+    </div>
+
+    <!-- Остальной контент страницы -->
+    <section class="construction-cradle-wrapper">
+      <div class="opacity" />
+      <div
+        data-aos="fade-up"
+        class="construction-cradle container"
+      >
+        <h1 data-i18n="title" class="title">СТРОИТЕЛЬНАЯ ЛЮЛЬКА <span class="yellow">ZLP-630</span></h1>
+        <div class="construction-cradle-content">
+          <p data-i18n="description">
+            Строительная люлька ZLP-630 – самая востребованная модель грузоподъёмностью до
+            630 кг. Имеет модульную разборную платформу, состоящую из секций разной длины,
+            что позволяет быстро изменять её размеры. Удобная платформа с рифлёным
+            металлическим настилом имеет ширину 0,74 м. Увеличенный вылет консоли удобно
+            использовать для работы на фасадах сложной конфигурации. В комплект входят
+            переносные контргрузы с ручками.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <img
+      src="./images/beton.png"
+      class="beton"
+      alt=""
+    />
+
+    <section class="content">
+      <div
+        class="container flex"
+        data-aos="fade-up"
+      >
+        <div class="features">
+          <h2
+            class="feature-title"
+            data-aos="fade-up"
+            data-i18n="characteristics"
+          >
+            Основные характеристики
+          </h2>
+          <div class="features-grid">
+            <div
+              class="features-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="feature">
+                <span data-i18n="length">Длина</span>
+                <span>6 м</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="capacity">Грузоподъемность</span>
+                <span>630 кг</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="width">Ширина</span>
+                <span>0.74 м</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="country">Страна-производитель</span>
+                <span>Китай</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="weight_console">Вес консноли</span>
+                <span>310 кг</span>
+              </div>
+            </div>
+            <div
+              class="features-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="feature">
+                <span data-i18n="weight_cradle">Вес люльки</span>
+                <span>450 кг</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="temperature">Температурный режим</span>
+                <span>от -20 до +40 °С</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="brand">Бренд</span>
+                <span>Ihurmo</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="braking_gain">Тормозное усиление</span>
+                <span>15 Нм</span>
+              </div>
+              <div class="feature">
+                <span data-i18n="type">Тип</span>
+                <span>двухподвесной</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div
+          class="slider-container"
+          data-aos="fade-up"
+        >
+          <button
+            class="prev"
+            onclick="changeSlide(-1)"
+          >
+            &#10094;
+          </button>
+
+          <div class="slider">
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                        src="./images/detail-15.png"
+                        alt="Противовесы"
+                />
+                <p class="detail-descrption">Противовесы</p>
+                <p class="price">300 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/construction-cradle.png"
+                  alt="Двигатель"
+                />
+                <p data-i18n="cradle" class="detail-descrption">Строительная люлька ZLP-630</p>
+                <p class="price">155 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-1.png"
+                  alt="Двигатель"
+                />
+                <p class="detail-descrption">
+                  Двигатель, редуктор, концевой выключатель, разъем 8 контактный
+                </p>
+                <p class="price">49 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-2.png"
+                  alt="Редуктор"
+                />
+                <p class="detail-descrption">Редуктор</p>
+                <p class="price">30 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-3.png"
+                  alt="Электрощит"
+                />
+                <p class="detail-descrption">Электрощит 4 пускателя</p>
+                <p class="price">14 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-4.png"
+                  alt="Кабель"
+                />
+                <p class="detail-descrption">Кабель силовой морозостойкий 75м</p>
+                <p class="price">16 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-5.png"
+                  alt="Автомат"
+                />
+                <p class="detail-descrption">Автомат</p>
+                <p class="price">2 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-6.png"
+                  alt="Трансформатор"
+                />
+                <p class="detail-descrption">Трансформатор</p>
+                <p class="price">15 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-7.png"
+                  alt="Электротормоз"
+                />
+                <p class="detail-descrption">Электротормоз</p>
+                <p class="price">3 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-8.png"
+                  alt="Ловитель"
+                />
+                <p class="detail-descrption">Ловитель</p>
+                <p class="price">5 000 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-9.png"
+                  alt="Тросоукладчик"
+                />
+                <p class="detail-descrption">Тросоукладчик 3 отв</p>
+                <p class="price">1 100 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-10.png"
+                  alt="Пульт"
+                />
+                <p class="detail-descrption">Пульт</p>
+                <p class="price">1 300 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-11.png"
+                  alt="Пускатель"
+                />
+                <p class="detail-descrption">Пускатель</p>
+                <p class="price">1 800 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-12.png"
+                  alt="Строховочный механизм"
+                />
+                <p class="detail-descrption">Строховочный механизм</p>
+                <p class="price">3 100 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-13.png"
+                  alt="Талреп"
+                />
+                <p class="detail-descrption">Талреп</p>
+                <p class="price">1 100 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-14.png"
+                  alt="Шестерная"
+                />
+                <p class="detail-descrption">Ведущая шестерная</p>
+                <p class="price">6 500 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-16.png"
+                  alt="Кабель"
+                />
+                <p class="detail-descrption">Кабель для двигателя 1 м</p>
+                <p class="price">500 сом</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="detail-card">
+                <img
+                  src="./images/detail-17.png"
+                  alt="Разъем"
+                />
+                <p class="detail-descrption">Разъем 8 штыковой</p>
+                <p class="price">1 100 сом</p>
+              </div>
+            </div>
+            <!-- Добавьте дополнительные изображения, если нужно -->
+          </div>
+
+          <button
+            class="next"
+            onclick="changeSlide(1)"
+          >
+            &#10095;
+          </button>
+        </div>
+        <!-- <h2
+          class="section-title"
+          data-aos="fade-up"
+        >
+          Комплектующие
+        </h2> -->
+        <!-- <div class="detail-cards"></div> -->
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <!-- <footer class="footer">
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
